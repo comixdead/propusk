@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+}
+#osn {
+	height: 90px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 39px;
+}
+a {
+	text-decoration: none;
+	color: black;
+	padding: 39px;
+}
+a:hover {
+}
+
+#main {
+	height: 93%;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+
+}
+.but {
+	font-size: 63px;
+	padding: 39px;
+	border-radius: 0px;
+}
+.but:hover {
+	background: none;
+}

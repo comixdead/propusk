@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="C:\PracticWorker\WorkerPapka\Zadachieilera\home.css">
+	<style>
+		#field td {
+		width: 39px;
+		height: 39px;
+		border: 1px solid black;
+		text-align: center;
+		font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<header><a href="C:\zelpropusk\dadada\dwdw\Landing\index.html" id="home"><img src="C:\zelpropusk\dadada\dwdw\home.png" alt=""></a></header>
+	<table id="field">
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		function start(cells) {
+	let i = 0;	
+	for (let cell of cells) {
+		cell.addEventListener('click', function step() {
+			if (i % 2 == 0) {
+				this.innerHTML = 'X';
+			} else {
+				this.innerHTML = 'O';
+			}
+			this.removeEventListener('click', step);			
+			if (isVictory(cells)) {
+				alert("Победили "+this.innerHTML); // победитель
+			}
+			else if (i == 9) {
+				alert('Ничья');
+			}			
+			i++;
+		});
+	}
+	}
+	function isVictory(cells) {
+	let combs = [
+		[0, 1, 2],
+		[3, 4, 5],
+		[6, 7, 8],
+		[0, 3, 6],
+		[1, 4, 7],
+		[2, 5, 8],
+		[0, 4, 8],
+		[2, 4, 6],
+	];
+	for (let comb of combs) {
+		if (
+			cells[comb[0]].innerHTML == cells[comb[1]].innerHTML &&
+			cells[comb[1]].innerHTML == cells[comb[2]].innerHTML &&
+			cells[comb[0]].innerHTML != ''
+		) {
+			return true;
+		}
+	}
+	return false;
+	}
+	let cells = document.querySelectorAll('#field td')
+	start(cells)	
+	</script>
+</body>
+</html>

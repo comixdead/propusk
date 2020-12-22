@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+}
+body {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+a {
+	text-decoration: none;
+	color: black;
+	border: 1px solid black;
+	padding: 9px;
+	transition: 0s;
+	font-size: 50px;
+}
+a:hover {
+	color: white;
+	background-color: black;
+}

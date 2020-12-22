@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+    <link rel="stylesheet" href="C:\zelpropusk\dadada\dwdw\Zadachieilera\home.css">
+    <link rel="stylesheet" type="text/css" href="C:\zelpropusk\dadada\dwdw\Zadachieilera">
+</head>
+<body>
+	<script type="text/javascript">
+	function largestPalindrome(){
+
+    var arr = [];    
+    for(var i =999; i>100; i--){
+        for(var j = 999; j>100; j--){
+            var mul = j*i;
+            if(isPalin(mul)){
+                arr.push(j * i);
+            }
+        }
+    }
+
+    	return Math.max.apply(Math, arr);
+	}
+
+	function isPalin(i){
+    	return i.toString() == i.toString().split("").reverse().join("");
+	}
+
+	console.log(largestPalindrome());
+
+	</script>
+</body>
+</html>							

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="C:\zelpropusk\dadada\dwdw\Zadachieilera\home.css">
+	<link rel="stylesheet" type="text/css" href="C:\zelpropusk\dadada\dwdw\Zadachieilera">
+</head>
+<body>
+	<script type="text/javascript">
+	function gcd(a, b) {
+    let t;
+    if (a > b) 
+    {
+        t = a;
+        a = b;
+        b = t;
+    }
+    // a <= b
+   	t = b % a;
+    return t ? gcd(t, a) : a;
+	}
+
+	function lcm(a, b) {
+		return a * b / gcd(a, b);
+	}
+
+	let LCM = lcm(1, 2);
+	for (let k = 3; k <= 20; k++) 
+	{
+	LCM = lcm(k, LCM);
+	console.log(k, LCM);
+	}
+	</script>
+</body>
+</html>
